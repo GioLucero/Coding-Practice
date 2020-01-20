@@ -18,12 +18,16 @@
 # step 3: return ints 
 
 nums = [1, 2, 4, 7, 10] 
-target = 17
+target = 11
 
-def twoSum(nums, target):
-    for i in range(len(nums) - 1):
-        for j in range(i+1, len(nums)):
+#time complexity: O(n^2)
+#space complexity: O(1)
+def two_sum(nums, target):
+    for i in range(len(nums)-1): #iterate through array for i 
+        for j in range(i+1, len(nums)): #iterate through array for j 
             if nums[i] + nums[j] == target: 
                 print(nums[i], nums[j]) # if both indices equal the target, print out both indices
                 return True
-        return False
+    return False
+
+print(two_sum(nums, target))
