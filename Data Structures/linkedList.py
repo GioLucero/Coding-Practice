@@ -1,3 +1,6 @@
+# This is an introduction to the linked list data structure. 
+
+
 class Node:
     def __init__(self, data):
         self.data = data

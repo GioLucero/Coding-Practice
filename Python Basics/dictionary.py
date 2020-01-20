@@ -1,9 +1,9 @@
 # Introduction to dictionaries
 
-d = {}
+d = {} #initialize a dictionary with the curly brackets
 # d = {"George": 24, "Tom": 32}
 
-d["George"] = 24
+d["George"] = 24 #appending key/value pairs to dictionary
 d["Tom"] = 32
 d["Jenny"] = 16
 
