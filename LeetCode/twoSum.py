@@ -17,17 +17,13 @@
 
 # step 3: return ints 
 
-nums = [1, 2, 4, 7, 10] #target is 17
+nums = [1, 2, 4, 7, 10] 
+target = 17
 
-def twoSum(nums):
-    total1 = 0
-    total2 = 0
-    i = 0
-    j = 1
-    for i in range(nums):
-        for j in range(nums):
-            if nums[i] + nums[j] == 17 and (nums[i] != nums[j]):
-                total1 += i
-                total2 += j
-    return(total1, total2)
-    
+def twoSum(nums, target):
+    for i in range(len(nums) - 1):
+        for j in range(i+1, len(nums)):
+            if nums[i] + nums[j] == target: 
+                print(nums[i], nums[j]) # if both indices equal the target, print out both indices
+                return True
+        return False
