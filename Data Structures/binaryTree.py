@@ -7,16 +7,7 @@
 # 3. Pointer to right child
 
 # Below is an example of a tree node with an integer data.
-# A Python class that represents an individual node  
-# in a Binary Tree 
-class Node: 
-    def __init__(self,key): 
-        self.left = None
-        self.right = None
-        self.val = key 
-
-
-# Python program to introduce Binary Tree 
+# # Python program to introduce Binary Tree 
 
 # A class that represents an individual node in a 
 # Binary Tree 

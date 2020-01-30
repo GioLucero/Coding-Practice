@@ -70,3 +70,12 @@ class Solution(object):
 # For space complexity
 # We didn't use extra space except the res
 # So it is O(1).
+
+    def threeSum(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: List[List[int]]
+        """
+    # iterate through the array for i,j,k and determine if the equal 0
+    # if true, print values of indices
+    # if not, increment by 1
