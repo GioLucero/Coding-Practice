@@ -107,6 +107,7 @@ int main(void)
                         printf("Enter Employee Salary: ");
                         scanf("%lf", &emp[numOfEmp].salary);                                   
                         numOfEmp += 1;
+
                 }
                 else {
                         printf("ERROR!!! Maximum Number of Employees Reached\n");
@@ -156,31 +157,27 @@ int main(void)
                 printf("===============\n");
 
                 do {
-                    empFound = 0;
+                    empFound = 1;
                     
                     printf("Enter Employee ID: ");
                     scanf("%d", &empID);
                     //iterate through array to determine if the empID is found 
                     for (i = 0; i < SIZE; i++) {
-                    if (empID == emp[i].id && emp[i].id != 0) {
-                        empFound = 1; 
+                    if (empID == emp[i].id) {
+                        empFound = 0; 
                         // used to track which employees were matched 
                         empPosition = i; 
-                    }
+                        }
                     }
                     // if found, the emplpyee will be removed
-                    if (empFound == 1) {
-                    printf("Employee %d will be removed\n\n", empID);
-                    for (i = empPosition; i < numOfEmp; i++) {
-                        emp[i] = emp[i + 1];
-                    }
-                    // decrease the number of employees by 1 after removing from the list 
-                    numOfEmp -= 1; 
-                    }
-                    else {
+                    if (empFound) {
                     printf("ERROR!!! Employee ID not found!\n");
                     }
-                } while (empFound != 1);
+                } while (empFound);
+                printf("Employee %d will be removed\n\n", emp[empPosition].id);
+                numOfEmp = empPosition;
+                emp[empPosition].id = 0;
+                
 
                 break;
         default:
