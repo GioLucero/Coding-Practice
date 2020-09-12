@@ -15,7 +15,8 @@
 def longest_substring(self, s: str) -> int: 
 	 if len(s) == 0:
             return 0
-        map = {} #initialize dictionary 
+            #initialize dictionary
+        map = {} 
         max_length = start = 0 #initialize max_length of substring
         
         for i in range(len(s)): #for loop to iterate through the dictionary

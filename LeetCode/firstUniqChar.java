@@ -18,7 +18,7 @@ char firstNotRepeatingCharacter(String s) {
             count.put(c, count.get(c) + 1);
         // Otherwise, set counter to 1
         } else {
-            count.put(c, 1);
+            count.put(c, 1) ;
         }
     }
     // Find min index value
